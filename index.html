@@ -432,103 +432,74 @@
     @media (max-width: 600px) {
       .grid { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; }
- /* Kategori kartlarındaki görseller düzgün görünmesi için */
-.koleksiyon-card img,
-.category-card img,
-.product-card img {
-    width: 100%;
-    height: 320px;        /* Kart yüksekliğini sabitle */
-    object-fit: cover;    /* Görseli kırparak kutuya tam oturtur */
-    border-radius: 12px;  /* Görsel köşeleri yumuşasın */
-    display: block;
-}
-/* Buket kartları için düzenli grid */
-.bouquet-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
+    }
 
-/* Kartın kendisi */
-.bouquet-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
+    /* Kategori / ürün kartlarındaki görsellerin düzgün görünmesi için */
+    .koleksiyon-card img,
+    .category-card img,
+    .product-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
 
-/* Fotoğraflar aynı boyutta kırpılsın */
-.bouquet-card img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-}
+    /* === BUKET KARTLARI GRID DÜZENİ === */
+    #kategori {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
 
-/* Başlık kısmı */
-.bouquet-info {
-    padding: 15px 20px;
-}
-/* === BUKET KARTLARI GRID DÜZENİ === */
-#bouquet-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px 60px;
-}
+    #kategori .section-header {
+      margin-bottom: 24px;
+    }
 
-#bouquet-section .section-header {
-  margin-bottom: 24px;
-}
+    .bouquet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
 
-.bouquet-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
+    .bouquet-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+      text-decoration: none;
+      color: inherit;
+    }
 
-/* Her kart */
-.bouquet-card {
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
-  text-decoration: none;
-  color: inherit;
-}
+    .bouquet-card img {
+      display: block;
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+    }
 
-/* Fotoğraflar aynı boyutta ve kırpılmış */
-.bouquet-card img {
-  display: block;
-  width: 100%;
-  height: 340px;
-  object-fit: cover;
-}
+    .bouquet-info {
+      padding: 14px 18px 18px;
+    }
 
-/* Kart içindeki yazılar */
-.bouquet-info {
-  padding: 14px 18px 18px;
-}
+    .bouquet-label {
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #a08678;
+      margin-bottom: 4px;
+    }
 
-.bouquet-label {
-  font-size: 11px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: #a08678;
-  margin-bottom: 4px;
-}
+    .bouquet-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
 
-.bouquet-title {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.bouquet-link {
-  font-size: 12px;
-  color: #c58fa0;
-}
-
- }
+    .bouquet-link {
+      font-size: 12px;
+      color: #c58fa0;
+    }
   </style>
 </head>
 <body>
@@ -553,7 +524,7 @@
 
       <div class="header-actions">
         <div class="mini-cart">
-  <button class="mini-cart-whatsapp" style="background:#25D366;color:#fff;border:none;padding:4px 10px;border-radius:999px;font-size:12px;cursor:pointer;">WhatsApp’tan Gönder</button>
+          <button class="mini-cart-whatsapp" style="background:#25D366;color:#fff;border:none;padding:4px 10px;border-radius:999px;font-size:12px;cursor:pointer;">WhatsApp’tan Gönder</button>
           <span>Sepet</span>
           <span class="mini-cart-count">0</span>
         </div>
@@ -602,78 +573,79 @@
       </div>
     </section>
 
-  <!-- === BUKET KARTLARI BAŞLANGIÇ === -->
-<section id="bouquet-section" class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2>Nişan İçin Hazırlanmış Buket Koleksiyonları</h2>
-      <p>Pure Eternity, Blooming Bride ve Blush Promise yapay buket koleksiyonları.</p>
-    </div>
-
-    <div class="bouquet-grid">
-
-      <!-- Pure Eternity -->
-      <a href="pure-eternity.html" class="bouquet-card">
-        <img src="Pure eternity.jpg" alt="Pure Eternity">
-        <div class="bouquet-info">
-          <div class="bouquet-label">Buket Koleksiyonu</div>
-          <div class="bouquet-title">Pure Eternity</div>
-          <div class="bouquet-link">Detaylı fotoğrafı gör →</div>
+    <!-- === BUKET KARTLARI BAŞLANGIÇ (KOLEKSİYONLAR) === -->
+    <section id="kategori" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nişan İçin Hazırlanmış Buket Koleksiyonları</h2>
+          <p>Pure Eternity, Blooming Bride ve Blush Promise yapay buket koleksiyonları.</p>
         </div>
-      </a>
 
-      <!-- Blooming Bride -->
-      <a href="blooming-bride.html" class="bouquet-card">
-        <img src="Blooming Bride.jpg" alt="Blooming Bride">
-        <div class="bouquet-info">
-          <div class="bouquet-label">Buket Koleksiyonu</div>
-          <div class="bouquet-title">Blooming Bride</div>
-          <div class="bouquet-link">Detaylı fotoğrafı gör →</div>
+        <div class="bouquet-grid">
+
+          <!-- Pure Eternity -->
+          <a href="pure-eternity.html" class="bouquet-card">
+            <img src="Pure eternity.jpg" alt="Pure Eternity">
+            <div class="bouquet-info">
+              <div class="bouquet-label">Buket Koleksiyonu</div>
+              <div class="bouquet-title">Pure Eternity</div>
+              <div class="bouquet-link">Detaylı fotoğrafı gör →</div>
+            </div>
+          </a>
+
+          <!-- Blooming Bride -->
+          <a href="blooming-bride.html" class="bouquet-card">
+            <img src="Blooming Bride.jpg" alt="Blooming Bride">
+            <div class="bouquet-info">
+              <div class="bouquet-label">Buket Koleksiyonu</div>
+              <div class="bouquet-title">Blooming Bride</div>
+              <div class="bouquet-link">Detaylı fotoğrafı gör →</div>
+            </div>
+          </a>
+
+          <!-- Blush Promise -->
+          <a href="blush-promise.html" class="bouquet-card">
+            <img src="Blush promise.jpg" alt="Blush Promise">
+            <div class="bouquet-info">
+              <div class="bouquet-label">Buket Koleksiyonu</div>
+              <div class="bouquet-title">Blush Promise</div>
+              <div class="bouquet-link">Detaylı fotoğrafı gör →</div>
+            </div>
+          </a>
+
         </div>
-      </a>
-
-      <!-- Blush Promise -->
-      <a href="blush-promise.html" class="bouquet-card">
-        <img src="Blush promise.jpg" alt="Blush Promise">
-        <div class="bouquet-info">
-          <div class="bouquet-label">Buket Koleksiyonu</div>
-          <div class="bouquet-title">Blush Promise</div>
-          <div class="bouquet-link">Detaylı fotoğrafı gör →</div>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-<!-- === BUKET KARTLARI BİTİŞ === -->
-
-
-
-
+      </div>
+    </section>
+    <!-- === BUKET KARTLARI BİTİŞ === -->
 
     <section id="urunler" class="section" style="background:#f9f6f4;">
       <div class="container">
         <div class="section-header">
           <div>
             <h2>Öne Çıkan Nişan Ürünleri</h2>
-            <p>Ziyaretçilerin ilk gördüğü ürünler – yüksek dönüşüm için vitrin alanı.</p>
+            <p>En çok tercih edilen üç premium buket – fiyatlarıyla birlikte.</p>
           </div>
-          <a href="#" class="btn btn-outline" style="font-size:12px; padding:7px 16px;">Tüm ürünleri gör</a>
+          <a href="#kategori" class="btn btn-outline" style="font-size:12px; padding:7px 16px;">Tüm koleksiyonu gör</a>
         </div>
 
         <div class="grid">
+          <!-- Pure Eternity Featured -->
           <article class="product-card">
             <div class="product-badge">Yeni</div>
-            <div class="product-image">
-  <img src="https://via.placeholder.com/400x300" alt="Ürün Görseli" style="width:100%;height:100%;object-fit:cover;border-radius:14px;" />
-            </div>
+            <a href="pure-eternity.html">
+              <div class="product-image">
+                <img src="Pure iç foto.jpg"
+                     alt="Pure Eternity Nişan Buketi"
+                     style="width:100%;height:100%;object-fit:cover;border-radius:14px;" />
+              </div>
+            </a>
             <div class="product-body">
-              <div class="product-title">Pudra Elegance Nişan Aranjmanı</div>
-              <div class="product-meta">Masa aranjmanı • Soft pembe &amp; krem</div>
+              <div class="product-title">Pure Eternity Nişan Buketi</div>
+              <div class="product-meta">Soft pembe &amp; krem tonlarında, zarif yapay nişan buketi.</div>
             </div>
             <div class="product-footer">
               <div class="product-price">
-                <span>₺1.650</span>
+                <span>₺1.950</span>
                 <span>1–3 iş gününde hazırlık</span>
               </div>
               <button class="btn-cart" type="button">
@@ -682,19 +654,24 @@
             </div>
           </article>
 
+          <!-- Blooming Bride Featured -->
           <article class="product-card">
             <div class="product-badge" style="background:var(--cb-success);">Popüler</div>
-            <div class="product-image">
-  <img src="https://via.placeholder.com/400x300" alt="Ürün Görseli" style="width:100%;height:100%;object-fit:cover;border-radius:14px;" />
-            </div>
+            <a href="blooming-bride.html">
+              <div class="product-image">
+                <img src="Bloom iç foto.jpg"
+                     alt="Blooming Bride Nişan Buketi"
+                     style="width:100%;height:100%;object-fit:cover;border-radius:14px;" />
+              </div>
+            </a>
             <div class="product-body">
-              <div class="product-title">Soft Pink Söz / Nişan Buketi</div>
-              <div class="product-meta">El buketi • Premium yapay gül</div>
+              <div class="product-title">Blooming Bride Nişan Buketi</div>
+              <div class="product-meta">Pastel nude tonlarında, gelin buketi görünümünde yapay buket.</div>
             </div>
             <div class="product-footer">
               <div class="product-price">
-                <span>₺1.250</span>
-                <span>Pastel tonlarda kişiselleştirme</span>
+                <span>₺2.150</span>
+                <span>Renk uyarlaması yapılabilir</span>
               </div>
               <button class="btn-cart" type="button">
                 <span>Sepete Ekle</span>
@@ -702,19 +679,24 @@
             </div>
           </article>
 
+          <!-- Blush Promise Featured -->
           <article class="product-card">
-            <div class="product-badge">Set</div>
-            <div class="product-image">
-  <img src="https://via.placeholder.com/400x300" alt="Ürün Görseli" style="width:100%;height:100%;object-fit:cover;border-radius:14px;" />
-            </div>
+            <div class="product-badge">Blush</div>
+            <a href="blush-promise.html">
+              <div class="product-image">
+                <img src="Blush iç foto.jpg"
+                     alt="Blush Promise Nişan Buketi"
+                     style="width:100%;height:100%;object-fit:cover;border-radius:14px;" />
+              </div>
+            </a>
             <div class="product-body">
-              <div class="product-title">Nişan Masası Premium Set</div>
-              <div class="product-meta">Masa aranjmanı + tepsi çiçeği</div>
+              <div class="product-title">Blush Promise Nişan Buketi</div>
+              <div class="product-meta">Sıcak blush tonlarında, fotoğrafta %100 doğal görünen yapay buket.</div>
             </div>
             <div class="product-footer">
               <div class="product-price">
-                <span>₺3.450</span>
-                <span>Konsept uyumlu tam set</span>
+                <span>₺2.050</span>
+                <span>Setlere eklenebilir</span>
               </div>
               <button class="btn-cart" type="button">
                 <span>Sepete Ekle</span>
@@ -837,9 +819,14 @@
       © 2025 CBLOOMS - Tüm hakları saklıdır.
     </div>
   </footer>
-<script>
-const wcBtn=document.querySelector('.mini-cart-whatsapp');
-if(wcBtn){wcBtn.onclick=()=>{window.location.href='https://wa.me/905347730844?text=Merhaba%2C%20sepetimi%20paylaşmak%20istiyorum.';};}
-</script>
+
+  <script>
+    const wcBtn = document.querySelector('.mini-cart-whatsapp');
+    if (wcBtn) {
+      wcBtn.onclick = () => {
+        window.location.href = 'https://wa.me/905347730844?text=Merhaba%2C%20sepetimi%20paylaşmak%20istiyorum.';
+      };
+    }
+  </script>
 </body>
 </html>
