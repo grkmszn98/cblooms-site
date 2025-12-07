@@ -469,6 +469,64 @@
 .bouquet-info {
     padding: 15px 20px;
 }
+/* === BUKET KARTLARI GRID DÜZENİ === */
+#bouquet-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+#bouquet-section .section-header {
+  margin-bottom: 24px;
+}
+
+.bouquet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Her kart */
+.bouquet-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Fotoğraflar aynı boyutta ve kırpılmış */
+.bouquet-card img {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+/* Kart içindeki yazılar */
+.bouquet-info {
+  padding: 14px 18px 18px;
+}
+
+.bouquet-label {
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #a08678;
+  margin-bottom: 4px;
+}
+
+.bouquet-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.bouquet-link {
+  font-size: 12px;
+  color: #c58fa0;
+}
 
  }
   </style>
@@ -544,37 +602,51 @@
       </div>
     </section>
 
-   <section id="bouquet">
-  <h2>Nişan İçin Hazırlanmış Buket Koleksiyonları</h2>
+  <!-- === BUKET KARTLARI BAŞLANGIÇ === -->
+<section id="bouquet-section" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Nişan İçin Hazırlanmış Buket Koleksiyonları</h2>
+      <p>Pure Eternity, Blooming Bride ve Blush Promise yapay buket koleksiyonları.</p>
+    </div>
 
-  <div class="bouquet-grid">
+    <div class="bouquet-grid">
 
-    <a href="pure-eternity.html" class="bouquet-card">
+      <!-- Pure Eternity -->
+      <a href="pure-eternity.html" class="bouquet-card">
         <img src="Pure eternity.jpg" alt="Pure Eternity">
         <div class="bouquet-info">
-            <h3>Pure Eternity</h3>
-            <p>Detaylı fotoğrafı gör →</p>
+          <div class="bouquet-label">Buket Koleksiyonu</div>
+          <div class="bouquet-title">Pure Eternity</div>
+          <div class="bouquet-link">Detaylı fotoğrafı gör →</div>
         </div>
-    </a>
+      </a>
 
-    <a href="blooming-bride.html" class="bouquet-card">
+      <!-- Blooming Bride -->
+      <a href="blooming-bride.html" class="bouquet-card">
         <img src="Blooming Bride.jpg" alt="Blooming Bride">
         <div class="bouquet-info">
-            <h3>Blooming Bride</h3>
-            <p>Detaylı fotoğrafı gör →</p>
+          <div class="bouquet-label">Buket Koleksiyonu</div>
+          <div class="bouquet-title">Blooming Bride</div>
+          <div class="bouquet-link">Detaylı fotoğrafı gör →</div>
         </div>
-    </a>
+      </a>
 
-    <a href="blush-promise.html" class="bouquet-card">
+      <!-- Blush Promise -->
+      <a href="blush-promise.html" class="bouquet-card">
         <img src="Blush promise.jpg" alt="Blush Promise">
         <div class="bouquet-info">
-            <h3>Blush Promise</h3>
-            <p>Detaylı fotoğrafı gör →</p>
+          <div class="bouquet-label">Buket Koleksiyonu</div>
+          <div class="bouquet-title">Blush Promise</div>
+          <div class="bouquet-link">Detaylı fotoğrafı gör →</div>
         </div>
-    </a>
+      </a>
 
+    </div>
   </div>
 </section>
+<!-- === BUKET KARTLARI BİTİŞ === -->
+
 
 
 
